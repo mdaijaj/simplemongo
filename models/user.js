@@ -2,7 +2,7 @@
 var mongoose=require('mongoose')
 var Schema=mongoose.Schema;
 
-const articleSchema = new mongoose.Schema({
+const articleSchema = new Schema({
     first_name: String,
     last_name: String,
     contact_no: Number,
@@ -10,6 +10,4 @@ const articleSchema = new mongoose.Schema({
     about: String
 });
 
-
-const Article = mongoose.model("Article", articleSchema);
-
+module.exports=mongoose.model("Article", articleSchema);    
